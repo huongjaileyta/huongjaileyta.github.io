@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bookshelf | Huong (Jailey) Ta</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========== TOP MENU (stays at the top, hides when scrolling down) ========== -->
+  <header class="topbar" id="topbar">
+    <nav class="wrap">
+      <a class="logo" href="index.html">Huong (Jailey) Ta</a>
+      <div class="links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#education">Education</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#leadership">Leadership</a>
+        <a href="index.html#interests">Interests</a>
+        <!-- GALLERY IS HIDDEN FOR NOW. To bring back the "Personal" dropdown with Gallery,
+             delete the Interests line above and remove the comment marks around this block:
+        <div class="dropdown">
+          <button class="drop-btn" type="button" aria-haspopup="true">Personal <span aria-hidden="true">▾</span></button>
+          <div class="drop-menu">
+            <div class="drop-box">
+              <a href="index.html#interests">Interests</a>
+              <a href="index.html#gallery">Gallery</a>
+            </div>
+          </div>
+        </div>
+        -->
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+
+  <div class="wrap">
+
+
+    <header class="page-head">
+      <h1>Bookshelf</h1>
+      <p class="sub">What I've been reading, and what I thought of it.</p>
+    </header>
+
+    <!-- ========== BOOKS ==========
+         For each book:
+         1. Covers load from Open Library (a free online book library). To use your own picture instead,
+            save it in your portfolio folder and change src="..." to the file name, like src="book1.jpg".
+         2. Change the title, author, and your note.
+         3. To add a book, copy one whole <figure class="book"> ... </figure> block. -->
+    <section>
+      <div class="shelf">
+
+        <figure class="book">
+          <div class="cover">Becoming Supernatural<img src="https://covers.openlibrary.org/b/isbn/9781401953096-L.jpg?default=false" alt="Cover of Becoming Supernatural" onerror="this.remove()"></div>
+          <span class="pill">Mind and body</span>
+          <h3>Becoming Supernatural</h3>
+          <p class="author">Dr. Joe Dispenza</p>
+          <p>I love how he uses quantum physics and the quantum field to explain how the brain works and how our thoughts shape who we become.</p>
+        </figure>
+
+        <figure class="book">
+          <div class="cover">Meditations<img src="https://covers.openlibrary.org/b/isbn/0812968255-L.jpg?default=false" alt="Cover of Meditations" onerror="this.remove()"></div>
+          <span class="pill">Philosophy</span>
+          <h3>Meditations</h3>
+          <p class="author">Marcus Aurelius</p>
+          <p>An easy read from one of the great philosophers. My biggest takeaway: things happen for a reason, and my job is to accept them and respond well.</p>
+        </figure>
+
+        <figure class="book">
+          <div class="cover">Verity<img src="https://covers.openlibrary.org/b/isbn/9781538724736-L.jpg?default=false" alt="Cover of Verity" onerror="this.remove()"></div>
+          <span class="pill">Thriller</span>
+          <h3>Verity</h3>
+          <p class="author">Colleen Hoover</p>
+          <p>So good. I love a dark, creepy story with a plot twist, and this one delivered.</p>
+        </figure>
+
+        <figure class="book">
+          <div class="cover">Atomic Habits<img src="book4.png" alt="Cover of Atomic Habits" onerror="this.remove()"></div>
+          <span class="pill">Self-growth</span>
+          <h3>Atomic Habits</h3>
+          <p class="author">James Clear</p>
+          <p>My first self-development book and the perfect place to start. It showed me how small daily habits add up to big changes.</p>
+        </figure>
+
+        <figure class="book">
+          <div class="cover">The 48 Laws of Power<img src="https://covers.openlibrary.org/b/isbn/0140280197-L.jpg?default=false" alt="Cover of The 48 Laws of Power" onerror="this.remove()"></div>
+          <span class="pill">Strategy</span>
+          <h3>The 48 Laws of Power</h3>
+          <p class="author">Robert Greene</p>
+          <p>My favorite lesson is Law 5: "So much depends on reputation. Guard it with your life."</p>
+        </figure>
+
+      </div>
+      <a class="text-link" href="index.html#interests">Back to my portfolio</a>
+    </section>
+
+  </div>
+
+  <footer style="background:none;color:var(--brown-soft);padding-top:1rem">© 2026 Huong (Jailey) Ta</footer>
+
+  <script>
+    const bar = document.getElementById('topbar');
+    let lastY = window.scrollY;
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      bar.classList.toggle('hide', y > lastY && y > 80);
+      bar.classList.toggle('scrolled', y > 10);
+      lastY = y;
+    }, { passive: true });
+  </script>
+</body>
+</html>
